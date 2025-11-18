@@ -1,6 +1,10 @@
 package tui;
 import java.util.Scanner;
 
+import model.Book;
+import model.BookContainer;
+import model.BookCopy;
+
 /**
  * MainMenu for Code sharing exercise
  * @author Anita Lykke Clemmensen
@@ -58,15 +62,34 @@ public class MainMenu {
     private void createTestData() {
     	//Only use classes from model layer
         //getInstance
+    	BookContainer bc = BookContainer.getInstance();
         //create some books
+    	Book b1 = new Book("hej", "verden");
+    	Book b2 = new Book("farvel", "verden");
+    	Book b3 = new Book("huifr", "verden");
+    	Book b4 = new Book("fhueriw", "verden");
         	//add to book container
+    	bc.addBook(b1);
+    	bc.addBook(b2);
+    	bc.addBook(b3);
+    	bc.addBook(b4);
+    		
     	//create some copies
-    		//add to book
+    	//add to book
+    	b1.addBookCopy(321);
+    	b1.addBookCopy(2321);
+    	b2.addBookCopy(4432);
+    	b2.addBookCopy(4352);
+    	b3.addBookCopy(874435203);
+    	b3.addBookCopy(87452103);
+    	b4.addBookCopy(2321);
+    	b4.addBookCopy(2341);
+    	System.out.println("Success");
     }
 
-	public static void main(String[] args) {
-		MainMenu program = new MainMenu();
-		program.start();
-	}
+    public static void main(String[] args) {
+    	MainMenu program = new MainMenu();
+    	program.start();
+    }
 
 }
