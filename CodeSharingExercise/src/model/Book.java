@@ -28,4 +28,9 @@ public class Book {
 	public void addBookCopy(int bookNumber) {
 		copies.add(new BookCopy(bookNumber));
 	}
+
+	public String getAuthor() {
+		return author;
+	}
+
 }

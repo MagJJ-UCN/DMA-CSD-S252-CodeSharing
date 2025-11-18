@@ -1,7 +1,6 @@
-package tui;
+package src.tui;
 
 import java.util.Scanner;
-
 import controller.BookController;
 import model.*;
 
@@ -24,7 +23,7 @@ public class BookMenu {
     public void start() {
         bookMenu();
     }
-
+    
     private void bookMenu() {
         boolean running = true;
         while (running) {
@@ -108,5 +107,5 @@ public class BookMenu {
     	keyboard.nextLine();
     	return res;
     }
-
+    
 }

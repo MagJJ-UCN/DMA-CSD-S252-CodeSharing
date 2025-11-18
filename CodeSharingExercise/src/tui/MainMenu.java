@@ -1,4 +1,4 @@
-package tui;
+package src.tui;
 import java.util.Scanner;
 
 import model.Book;
@@ -10,6 +10,7 @@ import model.BookCopy;
  * @author Anita Lykke Clemmensen
  * @version 0.1
  */
+
 public class MainMenu {
 	private BookMenu bookMenu;
 
